@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function saveData(){
+			// Check browser support	
+			if (typeof(Storage) != "undefined") {
+    			localStorage.setItem("firstname", "eshan");
+    			localStorage.setItem("lastname", "madake");
+			}
+    		else
+				alert("Sorry, your browser does not support Web Storage...");
+		}
+
+		function getData() {
+			var str="";
+			if(typeof(Storage) != "undefined"){
+				str+=localStorage.getItem("firstname")
+				str+=localStorage.getItem("lastname")
+				alert(str)
+				document.getElementById('d1').innerHTML=str
+			}
+			else
+				alert("Sorry,your browser does not support web storage");
+		}
+	</script>
+</head>
+<body>
+	<div id="d1"></div>
+<input type="button" onclick="saveData()" value="SAVE DATA">
+<input type="button" onclick="getData()" value="Get Data">
+</body>
+</html>

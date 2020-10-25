@@ -1,0 +1,964 @@
+﻿1] AGE Calculator
+
+WAP to accept two values from text box -> convert to date format and print the difference between two dates
+
+NOTE:- check validation first value should be less than second value
+
+2] display digital clock on screen
+
+3] Hide and seek game
+
+4] WAC Organization with orgName,location,turnOver
+acceptOranizationDetails
+displayOranizationDetails
+
+5] Search operation with marking in Yellow below searching word
+
+6] Create array of Employees with details empId,name,salary,joiningDate,
+   features push,pop,display in table format all records
+   search particular Employee using empId
+   Modify Employee Details with salary increment by 1000 whoes name starts 			with 'A' letter
+   count total records
+   print ascending order of records using names
+   print Employee records whoes salary is above average salary of all the 		Employees
+   print record/records who have joined in the month of Jan
+      
+
+   NOTE:- Using of HTML5 CSS3 OOP Javascript
+   
+All assignments are the combination of HTML5 CSS 3 and JAVASCRIPT
+
+7] Write a program accept number of rows and cols and create a dynamic table on browser
+
+8] Accept two numbers and a select box item for choice and print the calculation depending upon select box value
+
+9] Accept User Sign up page details and display same details in tabular formar
+
+10] counter watch using start,stop and pause button
+
+
+
+
+ 
+    
+    
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function Employee(empId,name,salary){
+			this.empId=empId;
+			this.name=name;
+			this.salary=salary;
+
+			this.showEmployeeDetails=function(){
+				return "<br>Values are"+this.empId+" "+this.name+" "+this.salary
+			}
+		}
+		var records=[];
+
+		function saveRecord(){
+			var val1=document.getElementById('txt1').value
+			var val2=document.getElementById('txt2').value
+			var val3=document.getElementById('txt3').value
+
+			var emp=new Employee(val1,val2,val3)
+			records.push(emp)
+			alert("Records saved")
+		}
+
+		function displayRecords(){
+			var str="";
+			for(i=0;i<records.length;i++){
+				str+=records[i].showEmployeeDetails();
+			}
+			document.getElementById('d1').innerHTML=str;
+		}
+
+
+
+	</script>
+</head>
+<body>
+
+Enter empId <input type="text" name="" id="txt1"> <br>
+Enter name <input type="text" name="" id="txt2"> <br>
+Enter salary <input type="text" name="" id="txt3"> <br>
+
+<input type="button" name="" onclick="saveRecord()" value="SaveRecord"> <br>
+<input type="button" name="" onclick="displayRecords()" value="DisplayRecords"> <br>
+
+<div id="d1"></div>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function Employee(empId,name,salary){
+			this.empId=empId;
+			this.name=name;
+			this.salary=salary;
+
+			this.showEmployeeDetails=function(){
+				alert("Values are"+this.empId+" "+this.name+" "+this.salary)
+			}
+		}
+		var records=[];
+
+		function saveRecord(){
+			var val1=document.getElementById('txt1').value
+			var val2=document.getElementById('txt2').value
+			var val3=document.getElementById('txt3').value
+
+			var emp=new Employee(val1,val2,val3)
+			records.push(emp)
+			alert("Records saved")
+		}
+
+		function displayRecords(){
+			for(i=0;i<records.length;i++){
+				records[i].showEmployeeDetails();
+			}
+		}
+
+
+	</script>
+</head>
+<body>
+
+Enter empId <input type="text" name="" id="txt1"> <br>
+Enter name <input type="text" name="" id="txt2"> <br>
+Enter salary <input type="text" name="" id="txt3"> <br>
+
+<input type="button" name="" onclick="saveRecord()" value="SaveRecord"> <br>
+<input type="button" name="" onclick="displayRecords()" value="DisplayRecords"> <br>
+
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		//liternal version
+		var emp={
+			empId:101,
+			name:"Tanish",
+			salary:100000,
+			showEmpDetails:function(){
+				alert("Values are"+this.empId+" "+this.name+" "+this.salary);
+			}
+		}
+		emp.showEmpDetails();
+
+
+		//constructor version 
+		// function Employee(){
+		// 	this.empId=101;
+		// 	this.name="Eshan";
+		// 	this.salary=10000;
+
+		// 	this.showValues=function(){
+		// 		alert("Values are"+this.empId+" "+this.name+" "+this.salary)
+		// 	}
+		// }
+		// var e1=new Employee();
+		// e1.showValues();
+	</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function Employee(){
+			this.empId=101;
+			this.name="Eshan";
+			this.salary=10000;
+
+			this.showValues=function(){
+				alert("Values are"+this.empId+" "+this.name+" "+this.salary)
+			}
+
+		}
+
+		var e1=new Employee();
+		e1.showValues();
+	</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	function submitValues(){
+		var num1=parseInt(document.getElementById('txt1').value); 
+		var num2=parseInt(document.getElementById('txt2').value); 
+
+		alert("Addition of two number is "+(num1+num2))
+
+	}
+
+	</script>
+</head>
+<body>
+Enter first number <input type="number" name="" id="txt1"> <br>
+Enter second number <input type="number" name="" id="txt2"> <br>
+<input type="button" name="" onclick="submitValues()" value="Submit">
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		alert("Hello alert")		
+		
+		var temp=confirm("Do you like mango");
+		alert(temp)
+
+
+	 	var num1=parseInt(prompt("Enter first number"));
+	 	var num2=parseInt(prompt("Enter second number"));
+
+	 	alert("Values are"+(num1+num2))
+
+	 	console.log("This is console message")
+	 	document.write("This is message to browser")
+	 	
+
+	</script>
+</head>
+<body>
+
+
+</body>
+</html>
+
+
+    
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			-webkit-animation-name: example; /* Chrome, Safari, Opera */
+			-webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+			
+		}
+
+	/* Chrome, Safari, Opera */
+	@-webkit-keyframes example {
+    	from {background-color: red; height: 100px; width:100px;}
+    	to {background-color: yellow; height: 400px;width:400px;}
+	}
+	</style>
+</head>
+<body>
+<div> Animation Example </div>
+</body>
+</html>
+
+
+
+    
+
+
+<html>
+   <head>
+   
+      <style type="text/css">
+         div > p:first-child
+         {
+            text-indent: 25px;
+         }
+      </style>
+      
+   </head>
+   <body>
+   
+      <div>
+         <p>First paragraph in div. This paragraph will be indented</p>
+         <p>Second paragraph in div. This paragraph will not be indented</p>
+      </div>
+      <p>But it will not match the paragraph in this HTML:</p>
+      
+      <div>
+         <h3>Heading</h3>
+         <p>The first paragraph inside the div. This paragraph will not be effected.</p>
+      </div>
+      
+   </body>
+</html>
+
+
+
+
+
+
+
+
+<html>
+   <head>
+      <style type="text/css">
+         a:active {color: #FF00CC}
+      </style>
+   </head>
+   <body>
+      <a href="">Click This Link</a>
+   </body>
+</html> 
+
+
+
+<html>
+   <head>
+      <style type="text/css">
+         body{
+         	margin: 20px;
+         	padding: 20px;
+         	font-family: 'Segoe UL', Tahoma;
+         }
+         .hiddenText{
+         	display: none;
+         }
+         .hoverDiv:hover +.hiddenText{
+         	display: block;
+         	color:rgb(71,0,65);
+         	font-weight: bold;
+         }
+      </style>
+   </head>
+   <body>
+	<h1> heading 1</h1>
+	<div class="hoverDiv" style="font-size: 18px"> Hover division </div>
+	<div class="hiddenText"> This is hidden text</div>
+
+
+	   </body>
+</html> 
+
+
+
+
+
+
+
+
+<html>
+   <head>
+      <style type="text/css">
+         a:hover {color: #FFCC00}
+      </style>
+   </head>
+   <body>
+      <a href="">Bring Mouse Here</a>
+   </body>
+</html> 
+
+
+
+<html>
+   <head>
+      <style type="text/css">
+         a:visited {color: red}
+      </style>
+   </head>
+   <body>
+      <a href="www.google.com">Click this link</a>
+   </body>
+</html> 
+
+
+
+
+
+
+<html>
+   <head>
+      <style type="text/css">
+         a:link {color: #FFC107;}
+      </style>
+   </head>
+   <body>
+      <a href="http://www.google.com">Black Link</a>
+   </body>
+</html>
+
+                 
+                 
+                 
+                 
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.myForm:focus-within {
+ 			 background: #f8f8f8
+    			repeating-linear-gradient(
+    		    45deg,
+      			transparent,
+      			transparent 35px,
+      			rgba(255, 255, 255, 0.5) 35px,
+      			rgba(255, 255, 255, 0.5) 70px
+    		);
+		}
+		.myForm:focus-within::before {
+			content: "I'm a happy selected form!";
+			color: rgb(239, 187, 53);
+		}
+
+	</style>
+</head>
+<body>
+<form tabindex="0" class="myForm">
+	<h3> What's your favorite color </h3>
+	<input type="text">
+</form>
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		input:focus {
+			background-color:yellow;
+			border: 10px solid #F47E58;
+		}
+	</style>
+</head>
+<body>
+Enter your name <input type="text" name="">
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+		@font-face{
+			font-family: myFont;
+			src: url(Breathing.ttf);
+		}
+		div{
+			font-family: myFont;
+		}
+	</style>
+</head>
+<body>
+<div> Division </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+https://gofile.io/d/1C4Kpv
+    
+    
+    
+    
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+	div{
+		color: red !important;
+	}
+	div{
+		color: green;
+	}
+
+	</style>
+</head>
+<body>
+	<div> Div </div>
+
+</body>
+</html>
+
+
+
+
+
+Cascading Style Sheets cascade. It means that the styles are applied in the same order as they are read by the browser. The first style is applied and then the second and so on.
+
+The !important rule provides a way to make your CSS cascade. It also includes the rules that are to be applied always. A rule having a !important property will always be applied, no matter where that rule appears in the CSS document.
+For example, in the following style sheet, the paragraph text will be black, even though the first style property applied is red:
+<style tyle="text/css">
+   <!--
+   p { color: #ff0000; }
+   p { color: #000000; }
+   -->
+</style>
+So, if you wanted to make sure that a property always applied, you would add the !important property to the tag. So, to make the paragraph text always red, you should write it as follows −
+<html>
+   <head>
+   
+      <style tyle="text/css">
+         p { color: #ff0000 !important; }
+         p { color: #000000; }
+      </style>
+      </head>
+   <body>
+      <p>C2L.com</>
+   </body>
+</html> 
+Here you have made p { color: #ff0000 !important; } mandatory, now this rule will always apply even you have defined another rule p { color: #000000; }
+
+                      
+                      
+                      
+                      
+
+
+The @font-face rule is used to exhaustively describe a font face for use in a document. @font-face may also be used to define the location of a font for download, although this may run into implementation-specific limits.
+
+In general, @font-face is extremely complicated, and its use is not recommended for any except those who are expert in font metrics.
+
+Here is an example −
+
+<style tyle="text/css">
+   <!--
+   @font-face {
+      font-family: "Scarborough Light";
+      src: url("http://www.font.site/s/scarbo-lt");
+   }
+   @font-face {
+      font-family: Santiago;
+      src: local ("Santiago"),
+      url("http://www.font.site/s/santiago.tt")
+      format("truetype");
+      unicode-range: U+??,U+100-220;
+      font-size: all;
+      font-family: sans-serif;
+   }
+   -->
+</style>
+
+
+
+
+
+
+
+If you are writing your document using a character set other than ASCII or ISO-8859-1 you might want to set the @charset rule at the top of your style sheet to indicate what character set the style sheet is written in.
+
+The @charset rule must be written right at the beginning of the style sheet without even a space before it. The value is held in quotes and should be one of the standard character-sets. For example −
+
+<style tyle="text/css">
+   <!--
+   @charset "iso-8859-1"
+   .......other CSS rules .....
+   -->
+</style>
+
+
+
+
+
+
+    
+
+
+
+div{
+	background-color: orange;
+}
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		@import "one.css";
+		p{
+			background-color: green;
+		}	
+
+	</style>
+</head>
+<body>
+
+<div> Division </div>
+<p>Para 1</p>
+
+</body>
+</html>
+
+
+
+
+
+
+The @import rule allows you to import styles from another style sheet. It should appear right at the start of the style sheet before any of the rules, and its value is a URL.
+
+It can be written in one of the two following ways −
+
+<style tyle="text/css">
+   <!--
+   @import "mystyle.css";
+   or
+   @import url("mystyle.css");
+   .......other CSS rules .....
+   -->
+</style>
+The significance of the @import rule is that it allows you to develop your style sheets with a modular approach. You can create various style sheets and then include them wherever you need them.
+
+
+
+
+
+
+
+
+The @import: rule imports another style sheet into the current style sheet.
+The @charset rule indicates the character set the style sheet uses.
+The @font-face rule is used to exhaustively describe a font face for use in a document.
+The !important rule indicates that a user-defined rule should take precedence over the author's style sheets.
+
+
+
+
+
+
+<html>   <head>   </head>      <body>      <p>Move the mouse over the words to see the cursor change:</p>            
+<div style="cursor:auto">Auto</div>      
+<div style="cursor:crosshair">Crosshair</div>      
+<div style="cursor:default">Default</div>      
+<div style="cursor:pointer">Pointer</div>     
+<div style="cursor:move">Move</div>      
+<div style="cursor:e-resize">e-resize</div>      
+<div style="cursor:ne-resize">ne-resize</div>      
+<div style="cursor:nw-resize">nw-resize</div>      
+<div style="cursor:n-resize">n-resize</div>      
+<div style="cursor:se-resize">se-resize</div>     
+ <div style="cursor:sw-resize">sw-resize</div>     
+ <div style="cursor:s-resize">s-resize</div>      
+<div style="cursor:w-resize">w-resize</div>      
+<div style="cursor:text">text</div>      
+<div style="cursor:wait">wait</div>      
+<div style="cursor:help">help</div>   </body>   </html> 
+
+
+
+
+
+$first-width: 5px;
+$second-width: 5px;
+
+@function adjust_width($n){
+	@return $n * $first-width + ($n - 1) * $second-width;
+}
+
+#set_width{
+	padding-left:adjust_width(10);
+}
+
+
+
+
+
+
+sass variables
+maps
+nestings
+functions
+mixing
+extends
+operators
+
+
+
+
+
+
+
+
+%message-shared{
+	border: 1px solid #ccc;
+	padding: 10px;
+	color: #333;
+}
+
+.message{
+	@extend %message-shared;
+}
+
+.success{
+	@extend %message-shared;
+	border-color: green;
+}
+
+.error{
+	@extend %message-shared;
+	border-color: red;	
+}
+
+.warning{
+	@extend %message-shared;
+	border-color: yellow;
+}
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title> </title>
+	<style type="text/css">
+	.message,.success,.error,.warning{
+	border:1px solid #ccc;
+	padding:10px;
+	color:#333
+	}
+
+	.success{
+	border-color:green;
+	}
+	.error{
+	border-color:red;
+	}
+	.warning{
+	border-color:yellow;
+	}
+
+</style>
+</head>
+<div class="message"> Message</div><br>
+<div class="success"> Success</div><br>
+<div class="error"> Error</div><br>
+<div class="warning"> Warning</div><br>
+
+
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+@use 'test'
+
+.myH1
+	background-color: test.$primary-color
+	color: blue
+        
+        
+        
+        
+
+
+$font-stack: Helvetica,sans-sarif
+$primary-color: #b87db4
+
+body
+	font: 100% $font-stack
+	color: $primary-color
+        
+        
+        
+        
+        
+
+
+
+@use 'test'
+.myH1
+	background-color: test.$primary-color
+	color: blue
+        
+        
+        
+        
+        
+
+
+$font-stack: Helvetica,sans-sarif
+$primary-color: #b87db4
+
+body
+	font: 100% $font-stack
+	color: $primary-color
+        
+        
+
+
+
+scss
+
+$font-stack: Helvetica,sans-sarif;
+$primary-color:#b87db4;
+
+body{
+	font:100% $font-stack;
+	color:$primary-color;
+}
+
+
+
+
+
+
+sass
+
+$font-stack: Helvetica,sans-sarif
+$primary-color: #b87db4
+
+body
+	font: 100% $font-stack
+	color: $primary-color
+        
+        
+        
+        
+css
+
+body{
+font:100% Helvetica,sans-sarif;
+color:#b87db4
+}
+
+
+
+
+
+
+
+
+
+npm install -g node-sass
+
+
+
+
+
+
+
+#d1{
+			background-color: green;
+			height: 200px;
+			width: 200px;
+
+		}
+
+        
+        
+        
+
+#d1{
+			background-color: orange;
+			height: 500px;
+			width: 500px;
+
+		}
+
+        
+        
+        
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" href="style1.css" title="style1">
+	<link rel="alternate stylesheet" type="text/css" href="style2.css" title="style2">
+	<link rel="alternate stylesheet" type="text/css" href="style2.css" title="style3">
+
+
+</head>
+<body>
+<div id="d1"> DBS Application </div>
+
+
+</body>
+</html>

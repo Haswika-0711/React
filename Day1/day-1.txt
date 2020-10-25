@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- <meta http-equiv="refresh" content="1"> -->
+</head>
+<body>
+<input list="browsers" name="browser">
+<datalist id="browsers">
+  <option value="Internet Explorer">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
+
+</body>
+</html>
+
+
+    
+
+
+Example 1 - Define keywords for search engines:
+     <meta name="keywords" content="HTML, CSS, XML, 
+      XHTML, JavaScript">
+Example 2 - Define a description of your web page
+  <meta name="description" content="Free Web tutorials on  
+        HTML and CSS">
+Example 3 - Define the author of a page:
+      <meta name="author" content="Hege Refsnes">
+Example 4 - Refresh document every 30 seconds:
+     <meta http-equiv="refresh" content="30">
+
+
+
+
+
+
+
+
+HTML5
+<!DOCTYPE html>
+
+HTML 4.01
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+XHTML 1.0
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+The HTML5 <!DOCTYPE>
+Minimum HTML5 Document
+Browser Support for HTML5
+HTML5 - New Features
+New Elements in HTML5
+New Semantic/Structural Elements
+1) HTML4 vs HTML5 – APIs
+2) HTML4 vs HTML5 – Deletion of Unnecessary Elements
+3) HTML4 vs HTML5 – More Flexibility
+4) HTML4 vs HTML5 -  New Elements
+5) HTML4 vs HTML5 – More Powerful
+
+
+Email
+ <input type="email" name="email">
+
+Search
+<input type="search" name="googlesearch">
+
+url
+ <input type="url" name="homepage">
+
+Number
+<input type="number" name="quantity" min="1" max="5">
+
+
+
+
+
+
+
+
+
+Range
+ <input type="range" name="points" min="0" max="10">
+
+Month
+<input type="month" name="bdaymonth">
+
+Time
+<input type="time" name="usr_time">
+
+Week
+ <input type="week" name="year_week">
+
+Datetime
+<input type="datetime-local" name="bdaytime">
+
+
+
+
+
+
+
+
+Enter a date before 1980-01-01:
+  <input type="date" name="bday" max="1979-12-31"><br>
+
+  Enter a date after 2000-01-01:
+  <input type="date" name="bday" min="2000-01-02"><br>
+  <input type="submit" value="Send"> 
+
+    
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+<div id="result"></div>
+<p>Click the button to see the counter increase.</p>
+</body>
+</html>
+<script>
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (sessionStorage.clickcount) {
+            sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+        } else {
+            sessionStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+</script>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function saveData(){
+			// Check browser support	
+			if (typeof(Storage) != "undefined") {
+    			localStorage.setItem("firstname", "eshan");
+    			localStorage.setItem("lastname", "madake");
+			}
+    		else
+				alert("Sorry, your browser does not support Web Storage...");
+		}
+
+     	function getData(){
+			var str="";
+			if (typeof(Storage) != "undefined") {
+    			str+=localStorage.getItem("firstname")
+    			str+=localStorage.getItem("lastname")
+    			alert(str)
+    			document.getElementById('d1').innerHTML=str
+			}
+    		else
+				alert("Sorry, your browser does not support Web Storage...");
+		}
+	</script>
+</head>
+<body>
+	<div id='d1'></div>
+	<input type="button" onclick="saveData()" value="SAVE DATA">
+	<input type="button" onclick="getData()" value="GET DATA">
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function saveData(){
+			// Check browser support	
+			if (typeof(Storage) != "undefined") {
+    			localStorage.setItem("firstname", "eshan");
+    			localStorage.setItem("lastname", "madake");
+			}
+    		else
+				alert("Sorry, your browser does not support Web Storage...");
+		}
+	</script>
+</head>
+<body>
+
+<input type="button" onclick="saveData()" value="SAVE DATA">
+</body>
+</html>
+
+
+
+
+
+
+8.4. getItem and setItem methodsWe store a key/value pair in either local or session storage by calling setItem, and 
+we retrieve the value from a key by calling getItem.
+
+If we want to store the data in or retrieve it from session storage, we simply call setItem or getItem on the sessionStorage global object. If we want to use local storage instead, we’d call setItem or getItem on the localStorage global object.
+For example, if we’d like to save the value "6“ under the key "size", we’d call setItem like this:
+localStorage.setItem("size", "6");
+To retrieve the value we stored to the "size" key, we’d use the getItem method, specifying only the key:
+var size = localStorage.getItem("size");
+ShortCut
+var size = localStorage["size"];
+
+Convert stored data using var size = parseInt(localStorage.getItem("size"));
+
+
+
+
+
+
+
+8.3. what web storage data look likeData saved in Web Storage is stored as key/value pairs.
+A few examples of simple key/value pairs:
+■ key: name, value: suresh
+■ key: trainer, value: html5
+■ key: email, value: sureshjain17@gmail.com
+Getting and setting our data
+
+
+
+
+
+
+
+
+8.2. local storage v/s cookiesLocal storage can at first glance seem to play a similar role to HTTP cookies, but  there are a few key differences. First of all, cookies are intended to be read on the server side, whereas local storage is only available on the client side. If you need your server-side code to react differently based on some saved values, cookies are the way to go. Yet, cookies are sent along with each HTTP request to your server and this can result in significant overhead in terms of bandwidth. 
+Local storage, on the other hand, just sits on the user’s hard drive waiting to be read, so it costs nothing to use
+.
+In addition, we have significantly more size to store things using local storage. With cookies, we could only store 4KB of information in total. 
+With local storage, the maximum is 5MB.
+
+
+
+
+8.1. Introduction
+The Web Storage API defines a standard for how we can save simple data locally
+on a user’s computer or device. Before the emergence of the Web Storage standard, web developers often stored user information in cookies, or by using plugins. With Web Storage, we now have a standardized definition for how to store up to 5MB of simple data created by our websites or web applications. Better still, Web Storage already works in Internet Explorer 8.0!
+Web Storage is a great complement to Offline Web Applications, because you need somewhere to store all that user data while you’re working offline, andWeb Storage provides it.
+Two kinds of storage
+session Storage
+Session storage lets us keep track of data specific to one window or tab. It allows us to isolate information in each window. Even if the user is visiting the same site in two windows, each window will have its own individual session storage object and thus have separate, distinct data.
+Session storage is not persistent—it only lasts for the duration of a user’s session
+on a specific site (in other words, for the time that a browser window or tab is open
+and viewing that site).
+Local Storage
+Unlike session storage, local storage allows us to save persistent data to the user’s computer, via the browser. When a user revisits a site at a later date, any data saved to local storage can be retrieved.
+
+
+
+<!DOCTYPE html>
+<html><head>
+<style>
+     summary::-webkit-details-marker {
+        color:#ADCA48; 
+          background:#ADCA48; 
+      } 
+details[open] 
+  summary::-webkit-details-marker {     color:#eaeaea;     background:#eaeaea;   outline: 2px solid #ADCA48; }
+    </style>
+</head><body> <details>
+	<summary>Click to see the details
+	</summary>
+	<p> Para 1</p>
+	<p> Para 2</p>
+</details></body></html>
+
+
+
+                                   
+                                   
+                                   
+                                    
+    
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- <meta http-equiv="refresh" content="1"> -->
+</head>
+<body>
+
+<form action="">
+	<table border="5px">
+		<tr>
+			<td>Enter your name <input type="type" name="txt1"> </td>
+		</tr>
+
+		<tr>a
+			<td> Enter password <input type="password" name="pass1"> </td>
+		</tr>
+
+		<tr> 
+			<td>Select technology C++<input type="checkbox" name=""> 
+				Java<input type="checkbox" name="">
+				NET<input type="checkbox" name="">
+				REACT<input type="checkbox" name="">
+			</td>
+		</tr>
+		<tr><td><input type="submit" name="" value="submit"></td></tr>
+</table>
+
+</form>
+
+<!-- <input list="browsers" name="browser">
+<datalist id="browsers">
+  <option value="Internet Explorer">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist> -->
+
+</body>
+</html>
+
+
+
+
+
+
+
+WELCOME TO REACT JS
