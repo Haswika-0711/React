@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Age Calculator</title>
+	<script type="text/javascript">
+		function ageCal() {
+			var d1=document.getElementById('date1').value.split("/")
+			var d2=document.getElementById('date2').value.split("/")
+			var date1=new Date(d1[2],d1[1],d1[0])
+			var date2=new Date(d2[2],d2[1],d2[0])
+			if(date1>date2){
+				var diff=Math.abs(date1.getTime()-date2.getTime());
+				var days=Math.ceil(diff/(1000*60*60*24));
+				document.getElementById('idd').innerHTML="The difference between two dates is"+days;
+			}
+			else{
+				document.getElementById('idd').innerHTML="Enter date1 greater than date2";
+			}
+
+		}
+	</script>
+</head>
+<body>
+	Enter date1<input type="text" name="" id="date1"> <br>
+	Enter date2<input type="text" name="" id="date2"> <br>
+
+	<input type="button" name="" value="submit" onclick="ageCal()"><br>
+
+
+	<div id="idd"></div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	var timerON;
+	var c =0;
+	function start(){
+		if(timerON == 1){
+           	 		return; }
+          		else{
+          		timer=setInterval(counter, 400);
+            		timerON=1;
+            		c=0;}
+	}
+	function counter(){
+             	document.getElementById('count').innerHTML= ++c;
+                 }
+	 function stop()
+            	{
+	clearInterval(timer);
+                  document.getElementById('count').innerHTML="0";
+                  timerON=0;
+	}
+
+	 function pause(){
+  	 if(timerON==1  )
+  	{
+        	clearInterval(timer);
+	timerON=0;
+           	}
+
+ }
+</script>
+</head>
+<body>
+<div id="count" >0</div><br>
+<input type="button" onclick="start()" value="start">
+<input type="button" onclick="pause()" value="pause">
+<input type="button"  onclick ="stop()" value=" stop">
+</body>
+</html>

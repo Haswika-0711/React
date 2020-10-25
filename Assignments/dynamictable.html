@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table,td,tr {
+  border: 2px solid black;
+}
+</style>
+<script type="text/javascript">
+	
+	function create(){
+
+		var t=document.getElementById('table');
+		var r=document.getElementById('row').value;
+		var c=document.getElementById('col').value;
+		for(i=1; i<=r; i++)
+		{
+         		var rw=t.insertRow(-1);    
+       		 for(j=1; j<=c; j++){
+       			var cel = rw.insertCell(0);
+       			cel.innerHTML="row"+(i-1);
+		}
+	}
+}
+</script>
+	
+</head>
+<body>
+
+Row_count:<input type="number" id="row"><br>
+Col_count:<input type="number" id="col"><br>
+<input type="button" onclick="create()" value="create_table">
+
+<table  cellpadding="10px" cellspacing="0" border="1" id="table"></table>
+</body>
+</html>
