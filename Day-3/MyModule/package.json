@@ -1,0 +1,15 @@
+{
+  "name": "npm_example_pkg_install",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "my_app_test123": "^1.0.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}
