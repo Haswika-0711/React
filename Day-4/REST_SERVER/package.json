@@ -1,0 +1,16 @@
+{
+  "name": "rest_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "generate_user.js",
+  "dependencies": {
+    "faker": "^5.1.0",
+    "fs": "^0.0.1-security"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
