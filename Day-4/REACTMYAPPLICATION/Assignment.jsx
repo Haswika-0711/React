@@ -11,9 +11,11 @@ class Assignment extends React.Component{
 
     }
 
-    handleClick(){
-        var name=document.getElementById("uname").value;
-      this.setState({name});
+    handleClick(e){
+       // var tname=document.getElementById("uname").value;
+        console.log("b4 modify"+this.state.name);
+      this.setState({name:this.ref.name.value});
+      console.log("after modify"+this.state.name);
       
     }
 
@@ -23,12 +25,13 @@ class Assignment extends React.Component{
 
     componentDidUpdate(prevProps,prevState){
         console.log("Component updated from ",+prevState.name+" to "+this.state.name);
+
     }
 
     render(){
         return(   
             <div>
-           <input type="text" id="uname"></input>
+           <input type="text" value="this.state.name" ref="name"></input>
            <button onClick={this.handleClick}>Click</button>
            </div>
         )
