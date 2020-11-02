@@ -5,6 +5,7 @@ class Signup extends React.Component {
   
       this.username = React.createRef();
       this.password = React.createRef();
+      this.repass=React.createRef();
       this.phnno=React.createRef();
       this.email=React.createRef();
       this.state = {
@@ -15,9 +16,10 @@ class Signup extends React.Component {
     handleSubmit(event) {
       const username = this.username.current.value;
       const password = this.password.current.value;
+      const repass=this.repass.current.value;
       const phnno=this.phnno.current.value;
       const email=this.email.current.value;
-      const errors = this.handleValidation(username, password,phnno,email);
+      const errors = this.handleValidation(username, password,repass,phnno,email);
   
       if (errors.length >= 0) {
         this.setState({ errors });
@@ -26,7 +28,7 @@ class Signup extends React.Component {
       
     };
   
-    handleValidation  (username, password,phnno,email)  {
+    handleValidation  (username, password,repass,phnno,email)  {
       const errors = [];
       if (username.length === 0) {
         errors.push("Username cannot be empty");
@@ -34,6 +36,10 @@ class Signup extends React.Component {
       
       if (password.length < 6) {
         errors.push("Password should be at least 6 characters long");
+      }
+
+      if(!(password === repass)){
+          errors.push("passwords should match");
       }
 
       if(phnno.length < 10 || phnno.length > 10){
@@ -60,6 +66,10 @@ class Signup extends React.Component {
             <div>
               <label>Password:</label>
               <input type="text" ref={this.password} />
+            </div>
+            <div>
+              <label>Re-Enter Password:</label>
+              <input type="text" ref={this.repass} />
             </div>
             <div>
                 <label>Phone Number:</label>
