@@ -6,6 +6,7 @@ class Signup extends React.Component {
       this.username = React.createRef();
       this.password = React.createRef();
       this.phnno=React.createRef();
+      this.email=React.createRef();
       this.state = {
         errors: []
       };
@@ -15,7 +16,8 @@ class Signup extends React.Component {
       const username = this.username.current.value;
       const password = this.password.current.value;
       const phnno=this.phnno.current.value;
-      const errors = this.handleValidation(username, password,phnno);
+      const email=this.email.current.value;
+      const errors = this.handleValidation(username, password,phnno,email);
   
       if (errors.length >= 0) {
         this.setState({ errors });
@@ -24,7 +26,7 @@ class Signup extends React.Component {
       
     };
   
-    handleValidation  (username, password,phnno)  {
+    handleValidation  (username, password,phnno,email)  {
       const errors = [];
       if (username.length === 0) {
         errors.push("Username cannot be empty");
@@ -36,6 +38,10 @@ class Signup extends React.Component {
 
       if(phnno.length < 10 || phnno.length > 10){
           errors.push("Phone number should be 10 digits");
+      }
+
+      if (!(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email))) {
+          errors.push("enter correct email");
       }
       
       return errors;
@@ -58,6 +64,10 @@ class Signup extends React.Component {
             <div>
                 <label>Phone Number:</label>
                 <input type="tel" ref={this.phnno} />
+            </div>
+            <div>
+                <label>Mail:</label>
+                <input type="email" ref={this.email} />
             </div>
             <div>
               <button onClick={this.handleSubmit.bind(this)}>Submit</button>
