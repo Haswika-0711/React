@@ -1,0 +1,49 @@
+﻿1.What is React?
+
+React is a JavaScript library for creating user interfaces by Facebook and Instagram. Many people choose to think of React as the V in MVC.
+We built React to solve one problem: building large applications with data that changes over time.React uses virtual DOM which is JavaScript object. This will improve apps performance since JavaScript virtual DOM is faster than the regular DOM.
+React can be used on client and server side.
+Component and Data patterns improve readability which helps to maintain larger apps.
+React can be used with other frameworks.
+
+2.Features of React?
+JSX
+Components
+One-way Data Binding
+Virtual DOM
+Simplicity
+Performance
+
+3.What is JSX?
+JSX is a JavaScript syntax extension that looks similar to XML. You can use a simple JSX syntactic transform with React.
+
+4.What is difference between Element and component?
+Element:It is a simple object that describes a DOM node and its attributes or properties you can say. It is an immutable description object and you can not apply any methods on it.
+Component:It is a function or class that accepts an input and returns a React element. It has to keep references to its DOM nodes and to the instances of the child components.
+
+5.How to create component in react?
+When creating a React component, the component's name must start with an upper case letter.
+The component has to include the extends React.Component statement, this statement creates an inheritance to React.Component, and gives your component access to React.Component's functions.
+The component also requires a render() method, this method returns HTML.
+
+class Car extends React.Component {
+  render() {
+    return <h2>Hi, I am a Car!</h2>;
+  }
+}
+
+6.When to use functional component and class component?
+If you are writing a presentational component which doesn't have its own state or needs to access a lifecycle hook,use functional component as much as possible. For state management you can use class component.
+
+7.What are pure components?
+Components can be termed as pure if they return same output for same input values at any point of time.
+
+8.what is state?
+The state object is where you store property values that belongs to the component.State is the place where the data comes from
+
+9.What are props?
+In a React component, props are variables passed to it by its parent component.
+
+10.Difference between state and props?
+In a React component, props are variables passed to it by its parent component. State on the other hand is still variables, but directly initialized and managed by the component.
+
