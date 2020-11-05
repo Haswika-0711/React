@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import CompOne from './components/ComponentOne';
-import CompTwo from './components/ComponentTwo';
-
 
 class App extends Component {
   constructor() {
@@ -31,6 +28,7 @@ class App extends Component {
   }
 
   render() {
+    var temp="hello";
     const { appState } = this.state;
 
     return (
@@ -38,13 +36,10 @@ class App extends Component {
         <h1>React assignment #1</h1>
         <p>Current number: {appState}</p>
         <button onClick={this.increaseNumber}>Increase number</button>
-        <CompOne appState={appState} decreaseAppState={this.decreaseAppState} />
-        <CompTwo appState={appState} />
+       
       </div>
     );
   }
 }
 
 export default App;
-
-

@@ -1,10 +1,17 @@
 {
-    "parser": "babel-eslint",
-    "plugins": [
-      "react"
-    ],
-    "rules": {
-     
-    }
+  "env": {
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "rules": {
+    "no-console": "error",
+    "no-eval": "error",
+    "import/first": "error"
+    
   }
-  
+}

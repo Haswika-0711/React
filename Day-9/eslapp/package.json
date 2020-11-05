@@ -1,9 +1,10 @@
 {
-    "name": "eslapp",
+    "name": "linter-demo",
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "start": "webpack-dev-server --hot"
+        "start": "webpack-dev-server --hot",
+        "lint": "eslint ./*.js"
     },
     "dependencies": {
         "react": "^16.13.1",
@@ -29,3 +30,5 @@
         "eslint-plugin-react": "^7.21.3"
     }
 }
+
+
