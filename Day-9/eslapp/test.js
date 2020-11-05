@@ -1,13 +1,9 @@
-var foo=1
+var foo = 1
 console.log(foo)
 var bar
-bar=1
-function test(
-
-
-
-){
-    console.log(baz)
+bar = 1
+function test() {
+  console.log(baz)
 }
 
-var baz=1234
+var baz = 1234
