@@ -1,0 +1,709 @@
+{
+  "numFailedTestSuites": 1,
+  "numFailedTests": 0,
+  "numPassedTestSuites": 2,
+  "numPassedTests": 6,
+  "numPendingTestSuites": 0,
+  "numPendingTests": 0,
+  "numRuntimeErrorTestSuites": 1,
+  "numTodoTests": 0,
+  "numTotalTestSuites": 3,
+  "numTotalTests": 6,
+  "openHandles": [],
+  "snapshot": {
+    "added": 0,
+    "didUpdate": false,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0
+  },
+  "startTime": 1604481942988,
+  "success": false,
+  "testResults": [
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 1,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1604481953189,
+        "runtime": 3298,
+        "slow": false,
+        "start": 1604481949891
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "unmatched": 0,
+        "updated": 0,
+        "uncheckedKeys": []
+      },
+      "testFilePath": "C:\\Users\\user278\\Desktop\\React\\Day-7\\FluxAndRedux\\__tests__\\test.js",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "Filter function"
+          ],
+          "duration": 16,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Filter function it should filter by a search term (link)",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "it should filter by a search term (link)"
+        }
+      ],
+      "failureMessage": null
+    },
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 5,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1604481953205,
+        "runtime": 3449,
+        "slow": false,
+        "start": 1604481949756
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "unmatched": 0,
+        "updated": 0,
+        "uncheckedKeys": []
+      },
+      "testFilePath": "C:\\Users\\user278\\Desktop\\React\\Day-7\\FluxAndRedux\\__tests__\\test1.js",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "Example of jest"
+          ],
+          "duration": 16,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Example of jest Sum Equality",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "Sum Equality"
+        },
+        {
+          "ancestorTitles": [
+            "Math calculation check"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Math calculation check Adding 1 + 1 equals 2",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "Adding 1 + 1 equals 2"
+        },
+        {
+          "ancestorTitles": [
+            "Math calculation check"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Math calculation check Multiplying 1 * 1 equals 1",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "Multiplying 1 * 1 equals 1"
+        },
+        {
+          "ancestorTitles": [
+            "Math calculation check"
+          ],
+          "duration": 16,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Math calculation check Subtracting 1 - 1 equals 0",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "Subtracting 1 - 1 equals 0"
+        },
+        {
+          "ancestorTitles": [
+            "Math calculation check"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Math calculation check Dividing 1 / 1 equals 1",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "Dividing 1 / 1 equals 1"
+        }
+      ],
+      "failureMessage": null
+    },
+    {
+      "failureMessage": "  \u001b[1m● \u001b[22mTest suite failed to run\n\n    SyntaxError: C:\\Users\\user278\\Desktop\\React\\Day-7\\FluxAndRedux\\__tests__\\List.test.js: Support for the experimental syntax 'jsx' isn't currently enabled (8:33):\n\n    \u001b[0m \u001b[90m  6 | \u001b[39m    it(\u001b[32m'renders list items'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n    \u001b[0m \u001b[90m  7 | \u001b[39m        \u001b[36mconst\u001b[39m items \u001b[33m=\u001b[39m [\u001b[32m'one'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'two'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'three'\u001b[39m]\u001b[0m\n    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 | \u001b[39m        \u001b[36mconst\u001b[39m wrapper \u001b[33m=\u001b[39m shallow(\u001b[33m<\u001b[39m\u001b[33mList\u001b[39m items \u001b[33m=\u001b[39m { items } \u001b[33m/\u001b[39m\u001b[33m>\u001b[39m)\u001b[0m\n    \u001b[0m \u001b[90m    | \u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m  9 | \u001b[39m    })\u001b[33m;\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m 10 | \u001b[39m    \u001b[0m\n    \u001b[0m \u001b[90m 11 | \u001b[39m})\u001b[0m\n\n    Add @babel/preset-react (https://git.io/JfeDR) to the 'presets' section of your Babel config to enable transformation.\n    If you want to leave it as-is, add @babel/plugin-syntax-jsx (https://git.io/vb4yA) to the 'plugins' section to enable parsing.\n\n      \u001b[2mat Parser._raise (\u001b[22mnode_modules/@babel/parser/src/parser/error.js\u001b[2m:60:45)\u001b[22m\n      \u001b[2mat Parser.raiseWithData (\u001b[22mnode_modules/@babel/parser/src/parser/error.js\u001b[2m:55:17)\u001b[22m\n      \u001b[2mat Parser.expectOnePlugin (\u001b[22mnode_modules/@babel/parser/src/parser/util.js\u001b[2m:157:18)\u001b[22m\n      \u001b[2mat Parser.parseExprAtom (\u001b[22mnode_modules/@babel/parser/src/parser/expression.js\u001b[2m:1165:18)\u001b[22m\n      \u001b[2mat Parser.parseExprSubscripts (\u001b[22mnode_modules/@babel/parser/src/parser/expression.js\u001b[2m:568:23)\u001b[22m\n      \u001b[2mat Parser.parseUpdate (\u001b[22mnode_modules/@babel/parser/src/parser/expression.js\u001b[2m:548:21)\u001b[22m\n      \u001b[2mat Parser.parseMaybeUnary (\u001b[22mnode_modules/@babel/parser/src/parser/expression.js\u001b[2m:532:17)\u001b[22m\n      \u001b[2mat Parser.parseExprOps (\u001b[22mnode_modules/@babel/parser/src/parser/expression.js\u001b[2m:348:23)\u001b[22m\n      \u001b[2mat Parser.parseMaybeConditional (\u001b[22mnode_modules/@babel/parser/src/parser/expression.js\u001b[2m:313:23)\u001b[22m\n      \u001b[2mat Parser.parseMaybeAssign (\u001b[22mnode_modules/@babel/parser/src/parser/expression.js\u001b[2m:268:21)\u001b[22m\n",
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 0,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 0,
+        "runtime": 0,
+        "slow": false,
+        "start": 0
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testExecError": "C:\\Users\\user278\\Desktop\\React\\Day-7\\FluxAndRedux\\__tests__\\List.test.js: Support for the experimental syntax 'jsx' isn't currently enabled (8:33):\n\n\u001b[0m \u001b[90m  6 | \u001b[39m    it(\u001b[32m'renders list items'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m  7 | \u001b[39m        \u001b[36mconst\u001b[39m items \u001b[33m=\u001b[39m [\u001b[32m'one'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'two'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'three'\u001b[39m]\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 | \u001b[39m        \u001b[36mconst\u001b[39m wrapper \u001b[33m=\u001b[39m shallow(\u001b[33m<\u001b[39m\u001b[33mList\u001b[39m items \u001b[33m=\u001b[39m { items } \u001b[33m/\u001b[39m\u001b[33m>\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  9 | \u001b[39m    })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 10 | \u001b[39m    \u001b[0m\n\u001b[0m \u001b[90m 11 | \u001b[39m})\u001b[0m\n\nAdd @babel/preset-react (https://git.io/JfeDR) to the 'presets' section of your Babel config to enable transformation.\nIf you want to leave it as-is, add @babel/plugin-syntax-jsx (https://git.io/vb4yA) to the 'plugins' section to enable parsing.",
+      "testFilePath": "C:\\Users\\user278\\Desktop\\React\\Day-7\\FluxAndRedux\\__tests__\\List.test.js",
+      "testResults": []
+    }
+  ],
+  "wasInterrupted": false,
+  "coverageMap": {
+    "C:\\Users\\user278\\Desktop\\React\\Day-7\\FluxAndRedux\\filtered.js": {
+      "path": "C:\\Users\\user278\\Desktop\\React\\Day-7\\FluxAndRedux\\filtered.js",
+      "statementMap": {
+        "0": {
+          "start": {
+            "line": 2,
+            "column": 4
+          },
+          "end": {
+            "line": 2,
+            "column": 63
+          }
+        },
+        "1": {
+          "start": {
+            "line": 2,
+            "column": 21
+          },
+          "end": {
+            "line": 2,
+            "column": 63
+          }
+        },
+        "2": {
+          "start": {
+            "line": 3,
+            "column": 4
+          },
+          "end": {
+            "line": 3,
+            "column": 66
+          }
+        },
+        "3": {
+          "start": {
+            "line": 3,
+            "column": 26
+          },
+          "end": {
+            "line": 3,
+            "column": 66
+          }
+        },
+        "4": {
+          "start": {
+            "line": 4,
+            "column": 18
+          },
+          "end": {
+            "line": 4,
+            "column": 45
+          }
+        },
+        "5": {
+          "start": {
+            "line": 5,
+            "column": 4
+          },
+          "end": {
+            "line": 7,
+            "column": 7
+          }
+        },
+        "6": {
+          "start": {
+            "line": 6,
+            "column": 8
+          },
+          "end": {
+            "line": 6,
+            "column": 45
+          }
+        },
+        "7": {
+          "start": {
+            "line": 10,
+            "column": 0
+          },
+          "end": {
+            "line": 10,
+            "column": 30
+          }
+        }
+      },
+      "fnMap": {
+        "0": {
+          "name": "filterByTerm",
+          "decl": {
+            "start": {
+              "line": 1,
+              "column": 9
+            },
+            "end": {
+              "line": 1,
+              "column": 21
+            }
+          },
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 44
+            },
+            "end": {
+              "line": 8,
+              "column": 1
+            }
+          },
+          "line": 1
+        },
+        "1": {
+          "name": "(anonymous_1)",
+          "decl": {
+            "start": {
+              "line": 5,
+              "column": 27
+            },
+            "end": {
+              "line": 5,
+              "column": 28
+            }
+          },
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 50
+            },
+            "end": {
+              "line": 7,
+              "column": 5
+            }
+          },
+          "line": 5
+        }
+      },
+      "branchMap": {
+        "0": {
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 4
+            },
+            "end": {
+              "line": 2,
+              "column": 63
+            }
+          },
+          "type": "if",
+          "locations": [
+            {
+              "start": {
+                "line": 2,
+                "column": 4
+              },
+              "end": {
+                "line": 2,
+                "column": 63
+              }
+            },
+            {
+              "start": {
+                "line": 2,
+                "column": 4
+              },
+              "end": {
+                "line": 2,
+                "column": 63
+              }
+            }
+          ],
+          "line": 2
+        },
+        "1": {
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 4
+            },
+            "end": {
+              "line": 3,
+              "column": 66
+            }
+          },
+          "type": "if",
+          "locations": [
+            {
+              "start": {
+                "line": 3,
+                "column": 4
+              },
+              "end": {
+                "line": 3,
+                "column": 66
+              }
+            },
+            {
+              "start": {
+                "line": 3,
+                "column": 4
+              },
+              "end": {
+                "line": 3,
+                "column": 66
+              }
+            }
+          ],
+          "line": 3
+        }
+      },
+      "s": {
+        "0": 2,
+        "1": 0,
+        "2": 2,
+        "3": 0,
+        "4": 2,
+        "5": 2,
+        "6": 6,
+        "7": 1
+      },
+      "f": {
+        "0": 2,
+        "1": 6
+      },
+      "b": {
+        "0": [
+          0,
+          2
+        ],
+        "1": [
+          0,
+          2
+        ]
+      },
+      "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+      "hash": "c7ea0e88a73d4088ca691f559996599dde30cd17"
+    },
+    "C:\\Users\\user278\\Desktop\\React\\Day-7\\FluxAndRedux\\math.js": {
+      "path": "C:\\Users\\user278\\Desktop\\React\\Day-7\\FluxAndRedux\\math.js",
+      "statementMap": {
+        "0": {
+          "start": {
+            "line": 1,
+            "column": 12
+          },
+          "end": {
+            "line": 1,
+            "column": 27
+          }
+        },
+        "1": {
+          "start": {
+            "line": 1,
+            "column": 22
+          },
+          "end": {
+            "line": 1,
+            "column": 27
+          }
+        },
+        "2": {
+          "start": {
+            "line": 2,
+            "column": 12
+          },
+          "end": {
+            "line": 2,
+            "column": 27
+          }
+        },
+        "3": {
+          "start": {
+            "line": 2,
+            "column": 22
+          },
+          "end": {
+            "line": 2,
+            "column": 27
+          }
+        },
+        "4": {
+          "start": {
+            "line": 3,
+            "column": 12
+          },
+          "end": {
+            "line": 3,
+            "column": 27
+          }
+        },
+        "5": {
+          "start": {
+            "line": 3,
+            "column": 22
+          },
+          "end": {
+            "line": 3,
+            "column": 27
+          }
+        },
+        "6": {
+          "start": {
+            "line": 4,
+            "column": 12
+          },
+          "end": {
+            "line": 4,
+            "column": 27
+          }
+        },
+        "7": {
+          "start": {
+            "line": 4,
+            "column": 22
+          },
+          "end": {
+            "line": 4,
+            "column": 27
+          }
+        },
+        "8": {
+          "start": {
+            "line": 6,
+            "column": 0
+          },
+          "end": {
+            "line": 6,
+            "column": 39
+          }
+        }
+      },
+      "fnMap": {
+        "0": {
+          "name": "(anonymous_0)",
+          "decl": {
+            "start": {
+              "line": 1,
+              "column": 12
+            },
+            "end": {
+              "line": 1,
+              "column": 13
+            }
+          },
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 22
+            },
+            "end": {
+              "line": 1,
+              "column": 27
+            }
+          },
+          "line": 1
+        },
+        "1": {
+          "name": "(anonymous_1)",
+          "decl": {
+            "start": {
+              "line": 2,
+              "column": 12
+            },
+            "end": {
+              "line": 2,
+              "column": 13
+            }
+          },
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 22
+            },
+            "end": {
+              "line": 2,
+              "column": 27
+            }
+          },
+          "line": 2
+        },
+        "2": {
+          "name": "(anonymous_2)",
+          "decl": {
+            "start": {
+              "line": 3,
+              "column": 12
+            },
+            "end": {
+              "line": 3,
+              "column": 13
+            }
+          },
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 22
+            },
+            "end": {
+              "line": 3,
+              "column": 27
+            }
+          },
+          "line": 3
+        },
+        "3": {
+          "name": "(anonymous_3)",
+          "decl": {
+            "start": {
+              "line": 4,
+              "column": 12
+            },
+            "end": {
+              "line": 4,
+              "column": 13
+            }
+          },
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 22
+            },
+            "end": {
+              "line": 4,
+              "column": 27
+            }
+          },
+          "line": 4
+        }
+      },
+      "branchMap": {},
+      "s": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1
+      },
+      "f": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1
+      },
+      "b": {},
+      "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+      "hash": "2475dd039778bf8e98c691c60f7aa1ddd6634f81"
+    },
+    "C:\\Users\\user278\\Desktop\\React\\Day-7\\FluxAndRedux\\sum.js": {
+      "path": "C:\\Users\\user278\\Desktop\\React\\Day-7\\FluxAndRedux\\sum.js",
+      "statementMap": {
+        "0": {
+          "start": {
+            "line": 2,
+            "column": 4
+          },
+          "end": {
+            "line": 2,
+            "column": 17
+          }
+        },
+        "1": {
+          "start": {
+            "line": 4,
+            "column": 0
+          },
+          "end": {
+            "line": 4,
+            "column": 21
+          }
+        }
+      },
+      "fnMap": {
+        "0": {
+          "name": "sum",
+          "decl": {
+            "start": {
+              "line": 1,
+              "column": 9
+            },
+            "end": {
+              "line": 1,
+              "column": 12
+            }
+          },
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 19
+            },
+            "end": {
+              "line": 3,
+              "column": 1
+            }
+          },
+          "line": 1
+        }
+      },
+      "branchMap": {},
+      "s": {
+        "0": 1,
+        "1": 1
+      },
+      "f": {
+        "0": 1
+      },
+      "b": {},
+      "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+      "hash": "be165ff60cbdf0b7a626c124d44ab6e658b82225"
+    }
+  }
+}

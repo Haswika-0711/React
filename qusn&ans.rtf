@@ -1,0 +1,252 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil\fcharset2 Symbol;}}
+{\*\generator Riched20 10.0.15063}\viewkind4\uc1 
+\pard\sl276\slmult1\fs22\lang9 1.What is React?\par
+\par
+React is a JavaScript library for creating user interfaces by Facebook and Instagram. Many people choose to think of React as the\~V\~in\~MVC.\par
+We built React to solve one problem:\~building large applications with data that changes over time.React uses virtual DOM which is JavaScript object. This will improve apps performance since JavaScript virtual DOM is faster than the regular DOM.\par
+React can be used on client and server side.\par
+Component and Data patterns improve readability which helps to maintain larger apps.\par
+React can be used with other frameworks.\par
+\par
+2.Features of React?\par
+JSX\par
+Components\par
+One-way Data Binding\par
+Virtual DOM\par
+Simplicity\par
+Performance\par
+\par
+3.What is JSX?\par
+JSX is a JavaScript syntax extension that looks similar to XML. You can use a simple JSX syntactic transform with React.\par
+\par
+4.What is difference between Element and component?\par
+Element:It is a simple object that describes a DOM node and its attributes or properties you can say. It is an immutable description object and you can not apply any methods on it.\par
+Component:It is a function or class that accepts an input and returns a React element. It has to keep references to its DOM nodes and to the instances of the child components.\par
+\par
+5.How to create component in react?\par
+When creating a React component, the component's name must start with an upper case letter.\par
+The component has to include the extends React.Component statement, this statement creates an inheritance to React.Component, and gives your component access to React.Component's functions.\par
+The component also requires a render() method, this method returns HTML.\par
+\par
+class Car extends React.Component \{\par
+  render() \{\par
+    return <h2>Hi, I am a Car!</h2>;\par
+  \}\par
+\}\par
+\par
+6.When to use functional component and class component?\par
+If you are writing a presentational component which doesn't have its own state or needs to access a lifecycle hook,use functional component as much as possible. For state management you can use class component.\par
+\par
+7.What are pure components?\par
+Components can be termed as pure if they return same output for same input values at any point of time.\par
+\par
+8.what is state?\par
+The state object is where you store property values that belongs to the component.State is the place where the data comes from\par
+\par
+9.What are props?\par
+In a React component, props are variables passed to it by its parent component.\par
+\par
+10.Difference between state and props?\par
+In a React component, props are variables passed to it by its parent component. State on the other hand is still variables, but directly initialized and managed by the component.\par
+11)Why should we not update the state directly?\par
+\par
+a.) setState works in batches, which means one cannot expect the setState to do the state update immediately, it is an asynchronous operation so the state changes may happen in later point in time which means manually mutating state may get overriden by setState.\par
+b.) Performance. When using pure component or shouldComponentUpdate, they will do a shallow compare using === operator, but if you mutate the state the object reference will still be the same so the comparison would fail.\par
+\par
+12)What is the purpose of callback function as an argument of setState()?\par
+The callback function is invoked when setState finished and the component gets rendered. Since setState() is asynchronous the callback function is used for any post action.\par
+\par
+13)What is the difference between HTML and React event handling?\par
+In HTML, the attribute name is in all lowercase and is given a string invoking a function defined somewhere.\par
+In React, the attribute name is camelCase and are passed the function reference inside curly braces.\par
+\par
+14)How to bind methods or event handlers in JSX callbacks?\par
+a)Bind in constructor:\par
+\tab constructor() \{ \par
+this.handleClick = this.handleClickFunc.bind(this);  \}\par
+b)Bind in render\par
+c)Bind with arrow function\par
+\par
+15)How to pass a parameter to an event handler or callback?\par
+\par
+<button onClick=\{() => this.handleClick(id)\} /> \par
+ <button onClick=\{this.handleClick.bind(this, id)\} />\par
+\par
+16)What are synthetic events in React?\par
+A synthetic event is a cross-browser wrapper around the browser\rquote s native event\par
+\par
+17)What are inline conditional expressions?\par
+It is commonly referred to as the conditional operator, inline if (iif), or ternary if. An expression a ? b : c evaluates to b if the value of a is true, and otherwise to c.\par
+\par
+18)What is "key" prop and what is the benefit of using it in arrays of elements?\par
+Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity.\par
+\par
+19)What is the use of refs?\par
+Refs are a function provided by React to access the DOM element and the React element that you might have created on your own. They are used in cases where we want to change the value of a child component, without making use of props and all.\par
+\par
+20)How to create refs?\par
+You can create a ref by calling React.createRef() and attaching a React element to it using the ref attribute on the element.\par
+\par
+this.name=React.createRef()\par
+\par
+21)\tab What are forward refs?\par
+a) Ref forwading  is a technique for automatically passing a ref through a component to one of its children. It\rquote s very useful when building reusable component libraries. forwardRef is a function used to pass the ref to a child component.\par
+22)\tab Which is preferred option with in callback refs and findDOMNode()?\par
+a)   It is preferred to use callback refs over findDOMNode() API. Because findDOMNode() prevents certain improvements in React in the future.\par
+23)\tab Why are String Refs legacy?\par
+a)    In an older API where the ref attribute is a string, like "textInput", and the DOM node is accessed as this.refs.textInput  because string refs have some issues, are considered legacy, and are likely to be removed in one of the future releases.\par
+24)\tab What is Virtual DOM?\par
+a) The virtual DOM (VDOM) is a programming concept where an ideal, or \ldblquote virtual\rdblquote , representation of a UI is kept in memory and synced with the \ldblquote real\rdblquote  DOM by a library such as ReactDOM.\par
+25\tab How Virtual DOM works?\par
+a)   Like the actual DOM, the Virtual DOM is a node tree that lists elements and their attributes and content as objects and properties. React's render() method creates a node tree from React components and updates this tree in response to mutations in the data model, caused by actions.\par
+26\tab What is the difference between Shadow DOM and Virtual DOM?\par
+a)  Virtual DOM is creating a copy of the whole DOM object, and Shadow DOM creates small pieces of the DOM object which has their own, isolated scope for the element they represent.\par
+27\tab What is React Fiber?\par
+a) React Fiber is a set of internal algorithms for rendering graphics used by the JavaScript library React, as opposed to its old rendering algorithm, Stack.\par
+28\tab What is the main goal of React Fiber?\par
+a) The goal of React Fiber is to increase its suitability for areas like animation, layout, and gestures.\par
+29\tab What are controlled components?\par
+a)  React component that renders a form also controls what happens in that form on subsequent user input. An input form element whose value is controlled by React in this way is called a \ldblquote controlled component\rdblquote .\par
+30\tab What are uncontrolled components?\par
+ The Uncontrolled Components are the ones that store their own state internally, and you query the DOM using a ref to find its current value when you need it. This is a bit more like traditional HTML.\par
+31.What is the difference between createElement and cloneElement?.\par
+createElement is what JSX gets compiled to and is what React uses to create React Elements (object representations of some UI). cloneElement is used to clone an element and pass it new props.\par
+32.What is Lifting State Up in React?\par
+In React, sharing state is accomplished by moving it up to the closest common ancestor of the components that need it. This is called \ldblquote lifting state up\rdblquote\par
+33.What are the different phases of component lifecycle?\par
+Initialization: This is the stage where the component is constructed with the given Props and default state. This is done in the constructor of a Component Class.\par
+Mounting: Mounting is the stage of rendering the JSX returned by the render method itself.\par
+Updating: Updating is the stage when the state of a component is updated and the application is repainted.\par
+Unmounting: As the name suggests Unmounting is the final step of the component lifecycle where the component is removed from the page.\par
+34.What are the lifecycle methods of React?\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl276\slmult1 componentWillMount: Executed before rendering and is used for App level configuration in your root component.\par
+{\pntext\f1\'B7\tab}componentDidMount: Executed after first rendering and here all AJAX requests, DOM or state updates, and set up event listeners should occur.\par
+{\pntext\f1\'B7\tab}componentWillReceiveProps: Executed when particular prop updates to trigger state transitions.\par
+{\pntext\f1\'B7\tab}shouldComponentUpdate: Determines if the component will be updated or not. By default it returns true. If you are sure that the component doesn't need to render after state or props are updated, you can return false value. It is a great place to improve performance as it allows you to prevent a re-render if component receives new prop.\par
+{\pntext\f1\'B7\tab}componentWillUpdate: Executed before re-rendering the component when there are props & state changes confirmed by shouldComponentUpdate() which returns true.\par
+{\pntext\f1\'B7\tab}componentDidUpdate: Mostly it is used to update the DOM in response to prop or state changes.\par
+{\pntext\f1\'B7\tab}componentWillUnmount: It will be used to cancel any outgoing network requests, or remove all event listeners associated with the component.\par
+
+\pard\sl276\slmult1 35.\tab What are Higher-Order components?\par
+A higher-order component (HOC) is a function that takes a component and returns a new component. Basically, it's a pattern that is derived from React's compositional nature.\par
+We call them pure components because they can accept any dynamically provided child component but they won't modify or copy any behavior from their input components.\par
+const EnhancedComponent = higherOrderComponent(WrappedComponent)\par
+HOC can be used for many use cases:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl276\slmult1 Code reuse, logic and bootstrap abstraction.\par
+{\pntext\f1\'B7\tab}Render hijacking.\par
+{\pntext\f1\'B7\tab}State abstraction and manipulation.\par
+{\pntext\f1\'B7\tab}Props manipulation.\par
+
+\pard\sl276\slmult1 36.How to create props proxy for HOC component?\par
+You can add/edit props passed to the component using props proxy pattern like this:\par
+function HOC(WrappedComponent) \{\par
+  return class Test extends Component \{\par
+    render() \{\par
+      const newProps = \{\par
+        title: 'New Header',\par
+        footer: false,\par
+        showFeatureX: false,\par
+        showFeatureY: true\par
+      \}\par
+\par
+      return <WrappedComponent \{...this.props\} \{...newProps\} />\par
+    \}\par
+  \}\par
+\}\par
+37.What is context?\par
+Context provides a way to pass data through the component tree without having to pass props down manually at every level.\par
+For example, authenticated user, locale preference, UI theme need to be accessed in the application by many components.\par
+const \{Provider, Consumer\} = React.createContext(defaultValue)\par
+38.What is children prop?\par
+Children is a prop (this.props.children) that allow you to pass components as data to other components, just like any other prop you use. Component tree put between component's opening and closing tag will be passed to that component as children prop.\par
+There are a number of methods available in the React API to work with this prop. These include React.Children.map, React.Children.forEach, React.Children.count, React.Children.only, React.Children.toArray.\par
+39.How to write comments in React?\par
+The comments in React/JSX are similar to JavaScript Multiline comments but are wrapped in curly braces.\par
+Single-line comments:\par
+<div>\par
+  \{/* Single-line comments(In vanilla JavaScript, the single-line comments are represented by double slash(//)) */\}\par
+  \{`Welcome $\{user\}, let's play React`\}\par
+</div>\par
+Multi-line\par
+<div>\par
+  \{/* Multi-line comments for more than\par
+   one line */\}\par
+  \{`Welcome $\{user\}, let's play React`\}\par
+</div>\par
+\par
+40.What is the purpose of using super constructor with props argument?\par
+A child class constructor cannot make use of this reference until super() method has been called. The same applies for ES6 sub-classes as well. The main reason of passing props parameter to super() call is to access this.props in your child constructors.\par
+\par
+\par
+41\tab What is reconciliation?\par
+a)    Reconciliation is the process through which React updates the DOM. When a component's state changes, React has to calculate if it is necessary to update the DOM. It does this by creating a virtual DOM and comparing it with the current DOM. \par
+42\tab How to set state with a dynamic key name?\par
+a)     You need to make sure that function is not being called while passing the function as a parameter.\par
+render() \{\par
+  // Wrong: handleClick is called instead of passed as a reference!\par
+  return <button onClick=\{this.handleClick()\}>\{'Click Me'\}</button>\par
+\}\par
+Instead, pass the function itself without parenthesis:\par
+render() \{\par
+  // Correct: handleClick is passed as a reference!\par
+  return <button onClick=\{this.handleClick\}>\{'Click Me'\}</button>\par
+\par
+43\tab What would be the common mistake of function being called every time the     component renders?\par
+a)  You need to make sure that function is not being called while passing the function as a parameter.\par
+1\par
+2\par
+3\par
+4\tab render() \{\par
+  // Wrong: handleClick is called instead of passed as a reference!\par
+  return <button onClick=\{this.handleClick()\}>\{'Click Me'\}</button>\par
+\}\par
+Instead, pass the function itself without parenthesis:\par
+1\par
+2\par
+3\par
+4\tab render() \{\par
+  // Correct: handleClick is passed as a reference!\par
+  return <button onClick=\{this.handleClick\}>\{'Click Me'\}</button>\par
+\}\par
+\par
+44\tab Is lazy function supports named exports?\par
+No, currently React.lazy function supports default exports only. If you would like to import modules which are named exports, you can create an intermediate module that reexports it as the default. It also ensures that tree shaking keeps working and don\rquote t pull unused components. Let's take a component file which exports multiple named components,\par
+// MoreComponents.js\par
+export const SomeComponent = /* ... */;\par
+export const UnusedComponent = /* ... */;\par
+and reexport MoreComponents.js components in an intermediate file IntermediateComponent.js\par
+// IntermediateComponent.js\par
+export \{ SomeComponent as default \} from "./MoreComponents.js";\par
+Now you can import the module using lazy function as below,\par
+import React, \{ lazy \} from 'react';\par
+const SomeComponent = lazy(() => import("./IntermediateComponent.js"));\par
+\par
+45\tab Why React uses className over class attribute?\par
+class is a keyword in JavaScript, and JSX is an extension of JavaScript. That's the principal reason why React uses className instead of class. Pass a string as the className prop.\par
+render() \{\par
+  return <span className=\{'menu navigation-menu'\}>\{'Menu'\}</span>\par
+\}\par
+\par
+\par
+46\tab What are fragments?\par
+a) It's common pattern in React which is used for a component to return multiple elements. Fragments let you group a list of children without adding extra nodes to the DOM.\par
+47\tab Why fragments are better than container divs?\par
+Below are the list of reasons,\par
+i.\tab Fragments are a bit faster and use less memory by not creating an extra DOM node. This only has a real benefit on very large and deep trees.\par
+ii.\tab Some CSS mechanisms like Flexbox and CSS Grid have a special parent-child relationships, and adding divs in the middle makes it hard to keep the desired layout.\par
+iii.\tab The DOM Inspector is less cluttered.\par
+\par
+48\tab What are portals in React?\par
+a) Portal is a recommended way to render children into a DOM node that exists outside the DOM hierarchy of the parent component.\par
+ReactDOM.createPortal(child, container)\par
+The first argument is any render-able React child, such as an element, string, or fragment. The second argument is a DOM element.\par
+\par
+49\tab What are stateless components?\par
+a)  If the behaviour is independent of its state then it can be a stateless component. You can use either a function or a class for creating stateless components. But unless you need to use a lifecycle hook in your components, you should go for function components. There are a lot of benefits if you decide to use function components here; they are easy to write, understand, and test, a little faster, and you can avoid the this keyword altogether.\par
+50\tab What are stateful components?\par
+a)  If the behaviour of a component is dependent on the state of the component then it can be termed as stateful component. These stateful components are always class components and have a state that gets initialized in the constructor.\par
+\par
+}
+ 
